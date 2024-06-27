@@ -1,0 +1,91 @@
+{% load static %}
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Centro Médico Quirúrgico La Cascasa</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="{% static 'proyectoweapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="{% static 'proyectoweapp/css/gestion.css'%}" rel="stylesheet">
+  <style>
+      body {
+      background-color: #ffffff;
+      background-size: cover;
+      background-position: center;
+      padding: 0;
+      margin: 0;
+  }
+  </style>
+</head>
+
+
+<body>
+  <div class="container" style="text-align: center;">
+    <img src="{% static '/proyectoweapp/images/cmqlacasada_fachada.jpg' %}" alt="Logo de la aplicación" style="width: 200px;">
+  </div>
+   
+ <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-toupperrcase text-expanded font-weight-bold d-lg-none" href="{% url 'entrada_home' %}">Centro Médico Quirúrgico La Cascada</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item {% if request.path == '/entrada_home/' %}active{%endif%} px-lg-4">
+            <a class="nav-link text-touppercase text-expanded" href="{% url 'entrada_home' %}">Home</a>
+          </li>
+          
+          <li class="nav-item {% if request.path == '/service/' %}active{%endif%} px-lg-4">
+            <a class="nav-link text-touppercase text-expanded" href="{% url 'service' %}">Servicios</a>
+          </li>
+          <li class="nav-item {% if request.path == '/directorio/' %}active{%endif%} px-lg-4">
+            <a class="nav-link text-touppercase text-expanded" href="{% url 'directorio' %}">Directorio</a>
+          </li>
+          <li class="nav-item {% if request.path == '/contacto/' %}active{%endif%} px-lg-4">
+            <a class="nav-link text-touppercase text-expanded" href="{% url 'contacto' %}">Contacto</a>
+          </li> 
+          <li class="nav-item {% if request.path == '/blog/' %}active{%endif%} px-lg-4">
+            <a class="nav-link text-touppercase text-expanded" href="{% url 'blog' %}">Blog</a>
+          </li>
+          <li class="nav-item {% if request.path == '/inicio_admin/' %}active{%endif%} px-lg-4">
+            <a class="nav-link text-touppercase text-expanded" href="{% url 'inicio_admin' %}">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </body>
+  
+ {% block content %}
+ 
+
+ {% endblock %}
+
+ <footer class="footer text-faded text-center py-5">
+  <i class="fab fa-twitter">@cmqlacascada </i>
+  <i class="fab fa-instagram">cmqlacascada  </i>
+  <i class="fab fa-facebook">cmqlacascada </i>
+  
+  
+    
+  <p class="m-0 mbt">
+      <a href="{% url 'politica_privacidad' %}" class="link">Política de privacidad </a> 
+      <a href="{% url 'aviso_legal' %}" class="link">Aviso legal  </a> 
+      <a href="{% url 'cookies' %}" class="link">Cookies  </a>
+    </p>
+  <p class="m-0 mbt1">&copy; 2024 Centro Médico Quirúrgico La Cascada. Desarrollado por wsomas</p>
+   </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="{% static 'proyectoweapp/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'proyectoweapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>

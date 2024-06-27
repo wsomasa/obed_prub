@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="text-align: center;">
+        <img src="{% static '/proyectoweapp/images/admin.png' %}" alt="Logo de la aplicación" style="width: 200px;">
+        <!--<h1>Centro Médico Quirúrgico La Cascada</h1>-->
+        <p><a href="{% url 'admin:index' %}" style="font-size: 30px; font-weight: bold; color: #003366;">Ingresar</a></p>
+</div>
+
+{% endblock %}

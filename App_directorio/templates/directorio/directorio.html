@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{%load static %}
+
+{% block content %}
+
+
+<div class="container" style="top: auto; align-items: center;">
+  <div class="row">
+    <div class="col">
+     <h1 style="text-align: center;">Directorio</h1>
+     <div class="table-container">  
+      <table class="table table-hover custon_table">
+        <thead>
+        <tbody>
+          {% for directorio in directorios %}
+
+          <tr>
+            <th>{{ directorio.especialidad }}</th>
+            <th>{{ directorio.medico }}</th>
+            <th>{{ directorio.horario }}</th>
+          </tr>
+          {% endfor %}
+        </tbody>
+        </thead>
+      </table>
+     </div>
+    </table>
+
+    </div>
+
+    </div>
+  </div>  
+</div>
+
+
+
+  {% endblock %}

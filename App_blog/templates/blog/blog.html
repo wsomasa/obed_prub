@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+  {%load static %}
+
+  {% block content %}
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        {% for post in posts %}
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              {% if post.imagen %}
+              <div class="text-center">
+                <img class="card-img-top mx-auto d.block" src="{{ post.imagen.url }}" alt="{{ post.titulo }}" style="width: 50%;">
+              {% endif %}
+                <div class="card-body">
+                  <h2 class="card-title">{{ post.titulo }}</h2>
+                  <p class="card-text text-justify">{{ post.contenido|truncatewords:50 }}</p>
+                  <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Leer más</a>
+                </div> 
+              </div>
+              <div class="card-footer text-muted">
+                Publicado por {{ post.autor }} el {{ post.created }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+

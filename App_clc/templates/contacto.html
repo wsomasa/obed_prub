@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{%load static %}
+
+{% block content %}
+
+<body>
+  <div class="contenedorFormulario"> <p style="color: black" ></p>
+  
+  <form action="" method="post" style="text-align: center">
+      {% csrf_token %}
+      <div><table style="color: black; margin: 20px auto;"> {{ form.as_table }}</table> </div> 
+      <button type="submit" style="width: 150px">Enviar</button>
+  </form>
+</div>
+</body>
+
+  {% endblock %}
+

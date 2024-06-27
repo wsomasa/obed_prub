@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{%load static %}
+
+{% block content %}
+
+  {% for servicio in servicios %}
+
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      {% if servicio.imagen %}
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounde" src="{{servicio.imagen.url}}" alt="" style="width: 25%;">
+      {% else %}
+        <p>No hay imagen disponible para este servicio.</p>
+      {% endif %}
+      <div class="intro-tex left-0 text-center no-bg p-s rounde">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-lower-service title">{{servicio.especialidad}}</span>
+          <span class="section-heading-lower-service">{{servicio.contenido}}</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endfor%}
+
+
+  {% endblock %}

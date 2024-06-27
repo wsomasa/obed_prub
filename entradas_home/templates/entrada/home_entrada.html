@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% for mision in misiones %}
+<section class="page-section clearfix mision-section">
+  <div class="container centered-content">
+    <div class="intro-text no-bg p-s rounded">
+      <h2 class="section-heading mb-4">
+        <span class="section-heading-lower-service title">{{ mision.titulo }}</span>
+      </h2>
+      <p class="section-heading-lower-service content">{{ mision.contenido }}</p>      
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{% for vision in visiones %}
+<section class="page-section clearfix vision-section">
+  <div class="container centered-content">
+    <div class="intro-text no-bg p-s rounded">
+      <h2 class="section-heading mb-4">
+        <span class="section-heading-lower-service title">{{ vision.titulo }}</span>
+      </h2>
+        <p class="section-heading-lower-service content">{{ vision.contenido }}</p>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<!-- Sección para Entradas -->
+{% for entrada in entradas %}
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro centered-content">
+      {% if entrada.imagen %}
+      <div class="intro-img-wrapper centered-element">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounde centered-img" src="{{ entrada.imagen.url }}" alt="" style="width: 25%;">
+    </div>
+      {% endif %} 
+      <div class="text-container centered-element">
+        {% if entrada.titulo %} 
+        <h2 class="section-heading mb-4 centered-title">
+          <span class="section-heading-lower-entrada title">{{ entrada.titulo }}</span>
+        </h2>
+        {% endif%}
+        <div class="justify-text"> 
+        <p class="section-heading-lower-contenido content">{{ entrada.contenido }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
+
+
+
+{% endblock %}

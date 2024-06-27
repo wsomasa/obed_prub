@@ -1,0 +1,22 @@
+body {
+    /* Establece la imagen de fondo */
+    background-image: url('/App_clc/static/images/fondo.jpg');
+    /* Ajusta el tamaño de la imagen de fondo */
+    background-size: cover;
+            /* Centra la imagen de fondo vertical y horizontalmente */
+    background-position: center;
+    /* Fija la imagen de fondo para que no se desplace con el contenido */
+    background-attachment: fixed;
+    background-color: #0093E9;
+            /* Cambia el color de fondo en caso de que la imagen no se cargue o no se muestre completamente */
+      /* Puedes ajustar este color según tus necesidades */
+
+}
+        /* Estilos adicionales para el contenido de la página */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(249, 241, 241, 0.8); /* Agrega un fondo semitransparente al contenido */
+}
+ 

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{%load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal</title>
+</head>
+
+<body>
+    <div style="width: 75%; margin: 0 auto;">
+        <h2>1. Información Legal de la Empresa</h2>
+        <p>Denominación Social: Centro Médico Quirúrgico La Cascada</p>
+        <p>Domicilio Social: Carrera 9 con calle 4 Esquina Plaza Sucre N⁰ 9-6, Edificio, La Cascada Centro
+            San Cristóbal, Táchira
+            Venezuela</p>
+        <p>Correo Electrónico: Correo electrónico de contacto</p>
+        <p>Teléfono:  0276-3436139 / 3423628
+            / 04247622391
+           
+           WhatsApp: +58 4247622391</p>
+
+        <h2>2. Propiedad Intelectual</h2>
+        <p>Derechos de Autor: Todos los derechos reservados. Prohibida la reproducción sin autorización.</p>
+        <p>Marcas Registradas: Nombre de las marcas registradas utilizadas en el sitio web.</p>
+
+        <h2>3. Condiciones de Uso</h2>
+        <p>Acceso y Uso del Sitio: Condiciones para acceder y utilizar el sitio web.</p>
+        <p>Contenidos: Limitaciones y responsabilidades sobre la exactitud de la información.</p>
+        <p>Enlaces: No nos responsabilizamos por el contenido de los sitios enlazados fuera de nuestro dominio.</p>
+
+        <h2>4. Protección de Datos Personales</h2>
+        <p>Política de Privacidad: <a href="{% url 'politica_privacidad' %}">Ver Política de Privacidad</a></p>
+        <p>Derechos de los Usuarios: Derechos de acceso, rectificación, cancelación y oposición.</p>
+
+        <h2>5. Ley Aplicable y Jurisdicción</h2>
+        <p>Ley Aplicable: Leyes de la República Bolivariana de Venezuela.</p>
+        <p>Jurisdicción Competente: Tribunales de la ciudad donde se encuentra la empresa.</p>
+
+        <h2>6. Modificaciones y Actualizaciones</h2>
+        <p>Modificaciones: Nos reservamos el derecho de modificar este aviso legal sin previo aviso.</p>
+        <p>Fecha de Actualización: 21/06/2024</p>
+    </div>
+</body>
+
+  {% endblock %}
