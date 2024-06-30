@@ -473,3 +473,22 @@ ul.errorlist{
 }
 
 
+/* Estilo para el botón flotante */
+.btn-floating {
+  position: fixed; /* Fija la posición del botón en la pantalla */
+  bottom: 20px; /* Distancia desde el borde inferior */
+  right: 20px; /* Distancia desde el borde derecho */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  padding: 10px 20px;
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-floating:hover {
+  background-color: #002244; /* Cambia el color de fondo al pasar el ratón */
+}
