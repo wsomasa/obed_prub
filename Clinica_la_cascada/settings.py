@@ -9,12 +9,13 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import os 
+import os
 from pathlib import Path
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,11 +27,11 @@ SECRET_KEY = 'django-insecure-7kri6kqhhv_yxj#lruxf5=3ua#4#8r%sby*q6@k0y2g+*5rps6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['obedramoss.pythonanywhere.com']
 
 
 
- 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,8 +45,8 @@ INSTALLED_APPS = [
     'App_directorio',
     'import_export',
     'entradas_home',
-    
-    
+
+
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'Clinica_la_cascada.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], 
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,21 +121,25 @@ USE_I18N = True
 USE_TZ = True
 
 
- 
-STATIC_URL = '/static/' 
+
+STATIC_URL = '/static/'
+# modifique las dos lineas a continuacion
+"""STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+"""
+
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
-
-
 MEDIDA_URL = '/media/'
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
@@ -146,8 +151,8 @@ import logging
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587 
-EMAIL_USE_TLS=True 
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
 EMAIL_HOST_USER='wsomas@gmail.com'
 EMAIL_HOST_PASSWORD='efhebehekzjtsctc'
 
@@ -157,7 +162,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'handlers': {
         'console': {
-            'level': 'INFO', 
+            'level': 'INFO',
             'class': 'logging.StreamHandler',
         },
     },
@@ -172,9 +177,9 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': False,
         },
-        'django.server': {  
+        'django.server': {
             'handlers': ['console'],
-            'level': 'INFO',  
+            'level': 'INFO',
             'propagate': False,
         },
     },

@@ -1,0 +1,19 @@
+/* Cambiar el color de fondo del encabezado */
+#header {
+    background-color: #1aade3; /* Cambia #333 al color deseado */
+}
+
+/* Cambiar el color del texto del encabezado */
+#branding h1, #branding h2 {
+    color: #fff; /* Cambia #fff al color deseado */
+}
+
+/* Cambiar el color de fondo del menú de navegación */
+#nav-global, #user-tools, #content-related {
+    background-color: #aaebd4; /* Cambia #444 al color deseado */
+}
+
+/* Cambiar el color del texto del menú de navegación */
+#nav-global a, #user-tools a, #content-related a {
+    color: #fff; /* Cambia #fff al color deseado */
+}
