@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7kri6kqhhv_yxj#lruxf5=3ua#4#8r%sby*q6@k0y2g+*5rps6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['obedramoss.pythonanywhere.com']
 
@@ -130,32 +130,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 """
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
-MEDIDA_URL = '/media/'
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-import logging
-
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER='wsomas@gmail.com'
-EMAIL_HOST_PASSWORD='efhebehekzjtsctc'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 
 LOGGING = {
     'version': 1,
@@ -184,3 +163,20 @@ LOGGING = {
         },
     },
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='wsomas@gmail.com'
+EMAIL_HOST_PASSWORD='efhebehekzjtsctc'
