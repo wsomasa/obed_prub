@@ -14,9 +14,9 @@
               {% endif %}
                 <div class="card-body">
                   <h2 class="card-title">{{ post.titulo }}</h2>
-                  <p class="card-text text-justify">{{ post.contenido|truncatewords:50 }}</p>
+                  <p class="card-text text-justify">{{ post.contenido|truncatewords:30 }}</p>
                   <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Leer más</a>
-                </div> 
+                </div>
               </div>
               <div class="card-footer text-muted">
                 Publicado por {{ post.autor }} el {{ post.created }}

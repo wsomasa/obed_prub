@@ -96,9 +96,6 @@ p {
 }
 
 
-
-
-
 .section-heading .section-heading-lower {
   display: block;
   font-size: 3rem;
@@ -112,7 +109,7 @@ p {
   text-align: justify;
   color: black;
   background-color: #ffffff;
-  text-transform: lowercase;
+
 }
 
 .section-heading-lower-service.title {
@@ -404,9 +401,15 @@ ul.errorlist{
   text-transform: none;
 }
 
-.mision-section .content {
-  display: block;
-  text-align: center;
+.vision-section .service {
+
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: justify;
+  color: black;
+  background-color: #ffffff;
+
+
 }
 
 
@@ -425,8 +428,15 @@ ul.errorlist{
 }
 
 .vision-section .content {
+
   display: block;
-  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: justify;
+  color: black;
+  background-color: #ffffff;
+
+
 }
 
 /* contenido entradas */

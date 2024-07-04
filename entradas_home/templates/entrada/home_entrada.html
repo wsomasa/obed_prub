@@ -2,6 +2,10 @@
 {% load static %}
 
 {% block content %}
+
+
+
+
 {% for mision in misiones %}
 <section class="page-section clearfix mision-section">
   <div class="container centered-content">
@@ -9,7 +13,7 @@
       <h2 class="section-heading mb-4">
         <span class="section-heading-lower-service title">{{ mision.titulo }}</span>
       </h2>
-      <p class="section-heading-lower-service content">{{ mision.contenido }}</p>      
+      <span class="section-heading-lower-service content">{{ mision.contenido }}</span>
     </div>
   </div>
 </section>
@@ -22,7 +26,7 @@
       <h2 class="section-heading mb-4">
         <span class="section-heading-lower-service title">{{ vision.titulo }}</span>
       </h2>
-        <p class="section-heading-lower-service content">{{ vision.contenido }}</p>
+        <span class="section-heading-lower-service content">{{ vision.contenido }}</span>
     </div>
   </div>
 </section>
@@ -37,14 +41,14 @@
       <div class="intro-img-wrapper centered-element">
       <img class="intro-img img-fluid mb-3 mb-lg-0 rounde centered-img" src="{{ entrada.imagen.url }}" alt="" style="width: 25%;">
     </div>
-      {% endif %} 
+      {% endif %}
       <div class="text-container centered-element">
-        {% if entrada.titulo %} 
+        {% if entrada.titulo %}
         <h2 class="section-heading mb-4 centered-title">
           <span class="section-heading-lower-entrada title">{{ entrada.titulo }}</span>
         </h2>
         {% endif%}
-        <div class="justify-text"> 
+        <div class="justify-text">
         <p class="section-heading-lower-contenido content">{{ entrada.contenido }}</p>
         </div>
       </div>
