@@ -17,9 +17,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-7kri6kqhhv_yxj#lruxf5=3ua#4#8r%sby*q6@k0y2g+*5rps6'
 
+#DEBUG = True
+
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 DEBUG = False
 
-ALLOWED_HOSTS = ['obedramoss.pythonanywhere.com']
+ALLOWED_HOSTS = []
+
 
 
 INSTALLED_APPS = [
@@ -35,6 +40,7 @@ INSTALLED_APPS = [
     'App_directorio',
     'import_export',
     'entradas_home',
+    'sslserver',
 
 
 ]
@@ -133,7 +139,7 @@ LOGGING = {
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 3600
